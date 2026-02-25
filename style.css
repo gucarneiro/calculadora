@@ -1,9 +1,9 @@
 body{
-    background-color: rgb(160, 200, 214);
+    background-color: #81b5ab;
 }
 
 .calculadora{
-    background-color: #5a75a0c5;
+    background-color: #378b7d;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
@@ -19,12 +19,13 @@ button{
     border: none;
     border-radius: 25px;
     transition: 0.4s;
-    color: rgb(204, 230, 255);
-    background-color: rgb(48, 48, 48);
+    color: rgb(56, 245, 159);
+    background-color: #313030;
+    font-weight: bold;
 }
 
 button:hover{
-    background-color: rgb(204, 230, 255);
+    background-color: rgb(56, 245, 159);
     color: rgb(48, 48, 48);
 }
 
@@ -61,7 +62,12 @@ td {
 }
 
 .botaoOperacao{
-    background-color:  rgb(160, 200, 214);
+    background-color:  rgb(56, 245, 159);
     color: black;
     font-weight: bold;
+}
+
+.botaoOperacao:hover{
+    background-color: #313030;
+    color: rgb(56, 245, 159);
 }
