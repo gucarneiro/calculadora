@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Carneiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #81b5ab; 
+    margin: 0;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+    height: 100vh;">
+    <div class="calculadora" style="text-align: center; align-items: center;">
+        <table>
+            <tr>
+                <input type="text" id="visor" readonly style="width: 80%;">
+            </tr>
+        
+            <tr>
+                <td><button class="botaoOperacao" onclick="limpar()">C</button></td>
+                <td></td>
+                <td><button class="botaoOperacao" onclick="deleta()">⌫</button></td>
+                <td><button class="botaoOperacao" onclick="inserir('+')">+</button></td>
+            </tr>
+        
+            <tr>
+                <td><button class="botaoNumero" onclick="inserir('1')">1</button></td>
+                <td><button class="botaoNumero" onclick="inserir('2')">2</button></td>
+                <td><button class="botaoNumero" onclick="inserir('3')">3</button></td>
+                <td><button class="botaoOperacao" onclick="inserir('-')">-</button></td>
+            </tr>
+        
+            <tr >
+                <td><button class="botaoNumero" onclick="inserir('4')">4</button></td>
+                <td><button class="botaoNumero" onclick="inserir('5')">5</button></td>
+                <td><button class="botaoNumero" onclick="inserir('6')">6</button></td>
+                <td><button class="botaoOperacao" onclick="inserir('*')">*</button></td>                
+            </tr>
+        
+            <tr >        
+                <td><button class="botaoNumero" onclick="inserir('7')">7</button></td>
+                <td><button class="botaoNumero" onclick="inserir('8')">8</button></td>
+                <td><button class="botaoNumero" onclick="inserir('9')">9</button></td>
+                <td><button class="botaoOperacao" onclick="inserir('/')">/</button></td>
+            </tr>
+        
+            <tr> 
+                <td><button class="botaoOperacao" onclick="inserir('(')">(</button></td>
+                <td style="text-align: center;"><button class="botaoNumero" onclick="inserir('0')" style="text-align: center;">0</button></td>
+                <td><button class="botaoOperacao" onclick="inserir(')')">)</button></td>
+                <td><button class="botaoOperacao" onclick="igual()">=</button></td> 
+            </tr>
+        
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
