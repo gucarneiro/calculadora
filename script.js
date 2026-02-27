@@ -41,10 +41,6 @@ document.addEventListener('keydown', function(event){
         inserir(tecla);//verifica se a tecla pressionada é alguma operação, se sim ele adiona ao visor
     }
 
-    if (tecla === '(' || tecla === ')'){
-        inserir(tecla);//verifica se a tecla pressionada é alguma operação, se sim ele adiona ao visor
-    }
-
     if (tecla === 'Enter'){
         event.preventDefault();
         igual();
