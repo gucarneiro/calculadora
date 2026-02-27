@@ -1,6 +1,9 @@
 const visor = document.getElementById('visor');
 
 function inserir(valor){
+    if (visor.value.length > 9) {
+        return;
+    }
     //adiciona o valor do botao no visor para visualização
     let ultimoCaractere = visor.value.slice(-1);
     let operadores = ['+', '-', '*', '/'];
@@ -9,6 +12,7 @@ function inserir(valor){
         return; //se o novo valor for operador e o ultimo támbem, então não interrompe
     }    
     visor.value += valor;
+    
 }
 
 function limpar(){
@@ -21,6 +25,14 @@ function igual(valor){
     //pega oq esta no visor e adiciona a variavel
     let resultado = eval(expressao);
     //pega a variavel expressao e usa eval para resolver a equação
+    let resultadotxt = resultado.toString();
+    //transformma em string para fazer o calculo do if
+    if(resultadotxt.includes('.') && resultadotxt.split('.')[1].length > 2){//se o resultado tiver . e depois do ponto for >2
+        resultado = resultado.toFixed(4); //pega o resultado e limita a 4 casas decimais
+    }
+    if(resultadotxt.length>9){
+        resultado = resultado.toFixed(5)
+    }
     visor.value = resultado;
     //mostra o resultado no visor
 }
@@ -59,3 +71,4 @@ document.addEventListener('keydown', function(event){
         igual();
     }
 });
+
