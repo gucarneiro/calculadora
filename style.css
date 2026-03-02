@@ -44,9 +44,8 @@ button:active{
     padding: 10px;
     padding-top: 0;
     padding-bottom: 0;
-    border-radius: 15px;
     box-sizing: border-box;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 10px;
     border-color: 0;
     border: none;
@@ -55,6 +54,7 @@ button:active{
     font-family: 'JetBrains Mono', monospace;
     background-color: transparent;
     color: #ffffff;
+    height: 6.5vw;
 }
 
 table {
@@ -88,4 +88,20 @@ td {
 .botaoOperacao:hover{
     background-color: #313030;
     color: rgb(56, 245, 159);
+}
+
+@media screen and (max-width: 768px){
+   button{
+    width: 50px;
+    height: 50px;
+    font-size: 1.3em;
+    border-radius: 15px;
+    }
+
+    #visor{
+    font-size: 1.8em;
+    margin: auto;
+    letter-spacing: 0.5px;
+    height: 10.5vw;
+    }
 }
